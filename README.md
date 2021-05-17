@@ -5,17 +5,17 @@
  
  ## Objectives
  
-  • To implement a stack-like ADT from scratch
+  * To implement a stack-like ADT from scratch
 
-  • To create and extend ADTs to serve a particular purpose
+  * To create and extend ADTs to serve a particular purpose
 
-  • To explore control flow choices in an interactive application
+  * To explore control flow choices in an interactive application
 
-  • To use and potentially extend a GUI
+  * To use and potentially extend a GUI
 
-  • To recognize design patterns in the implementation
+  * To recognize design patterns in the implementation
 
-  • To add two more design patterns to your implementation
+  * To add two more design patterns to your implementation
  
  ## Overview
  
@@ -23,14 +23,14 @@
 
 ### Usage
 
- • Compile source files with `javac rummy/Proj2.java` and `javac rummy/Game.java`
- • To run:
+ * Compile source files with `javac rummy/Proj2.java` and `javac rummy/Game.java`
+ * To run:
     1. **player vs. computer game, run `java rummy.Proj2`**
     2. **computer vs. computer game, run `java rummy.Game`**
         - **`java rummy.Proj2 > output.txt` or `java rummy.Game > output.txt` creates a file containing your logs**
 
 
-• Optionally the program takes two command line arguments:
+* Optionally the program takes two command line arguments:
    
    - the `-0`, `-1`, and `-2` flags indicate the number of interactive players in the game
     
@@ -46,21 +46,21 @@
     
 ### Cards Values
 
- • Aces = 1 point
+ * Aces = 1 point
 
- • Face = 10 points
+ * Face = 10 points
 
- • All other cards are worth their face value
+ * All other cards are worth their face value
 
 ### Buttons Actions
 
- • *Draw from Stack*: draws from the Stack
+ * *Draw from Stack*: draws from the Stack
 
- • *Draw from Deck*: draws from the Deck
+ * *Draw from Deck*: draws from the Deck
 
- • *Lay on Table*: lays card on the table or lays the selected card on a Set on the table
+ * *Lay on Table*: lays card on the table or lays the selected card on a Set on the table
 
- • *Discard*: puts away the selected card in the Stack and terminates the player's turn
+ * *Discard*: puts away the selected card in the Stack and terminates the player's turn
 
 ### Project Specifications
 
