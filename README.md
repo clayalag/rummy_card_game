@@ -48,8 +48,11 @@
 ### Buttons Actions
 
 • *Draw from Stack*: draws from the Stack
+
 • *Draw from Deck*: draws from the Deck
+
 • *Lay on Table*: lays card on the table or lays the selected card on a Set on the table
+
 • *Discard*: puts away the selected card in the Stack and terminates the player's turn
 
 ### Project Specifications
