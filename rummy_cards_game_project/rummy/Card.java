@@ -66,7 +66,7 @@ public class Card implements CardInterface, Comparable<Card> {
    * Returns the Index of the rank in the defined static array <code>RANKS</code>.
    * @param rank the rank value of this card.
    */
-  // NOTE: NOT IN INTERFACE
+
   public static int getRankIndex(char rank) {
     switch (rank) {
     case 'a':
