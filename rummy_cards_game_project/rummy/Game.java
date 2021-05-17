@@ -45,7 +45,7 @@ public class Game {
       }
     }
 
-    // If MAX_NUMBER_OF_TURNS is exceeded terminate game early
+    // If maximum number of turns exceeded is exceeded terminate game early
     int p1Points = p1Hand.evaluateHand();
     int p2Points = p2Hand.evaluateHand();
     System.out.println("\nMaximum number of turns exceeded!");
@@ -65,7 +65,7 @@ public class Game {
       p1Hand.addCard(c);
     }
 
-    // Create Player 2's hand of 9 cards
+    // Create Player 2 hand of 9 cards
     for (int i = 0; i < numDealtCards; i++) {
       Card c = cardDeck.dealCard();
       p2Hand.addCard(c);
@@ -109,7 +109,7 @@ public class Game {
   }
 
   /**
-   * Handles user clicking on "Draw from Deck" button.
+   * Handles user clicking on Draw from Deck button.
    * 
    * @param playersHand the Hand of the player who clicked on the button.
    */
@@ -141,7 +141,7 @@ public class Game {
   }
 
   /**
-   * Handles user clicking on "Draw from Stack" button.
+   * Handles user clicking on Draw from Stack button.
    * @param playersHand the Hand of the player who clicked on the button.
    */
   private void handleDrawFromStack(Hand playersHand) {
@@ -167,7 +167,7 @@ public class Game {
   }
 
   /**
-   * Handles user clicking on "Lay on Table" button.
+   * Handles user clicking on Lay on Table button.
    * @param playersHand the Hand of the player who clicked on the button.
    * @param cards       the cards about to be laid on the table.
    */
@@ -227,7 +227,7 @@ public class Game {
   }
 
   /**
-   * Handles user clicking on "Discard" button.
+   * Handles user clicking on Discard button.
    * @param playersHand  the Hand of the player who clicked on the button.
    * @param selectedCard the card we're about to discard
    */
@@ -255,8 +255,7 @@ public class Game {
   }
 
   /**
-   * Generic function that mimics a player's move (drawing from deck/stack, laying
-   * sets/runs and finally discarding).
+   * Generic function that mimics a player's move 
    * @param playersHand the Hand of the player who clicked on the button.
    */
   private void makeMove(Hand playersHand) {
@@ -278,7 +277,7 @@ public class Game {
 
     playerDrawn = true;
 
-    // Search for a Set in the hand and lay on the table (if possible)
+    // Search for a Set in the hand and lay on the table
     Card[] set = playersHand.findSet();
     if (set != null) {
       handleLayOnTable(playersHand, set);
