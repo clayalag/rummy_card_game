@@ -102,21 +102,21 @@ public class Table extends JFrame implements ActionListener {
   }
 
   /**
-   * Paints Player 1 and Player 2's controls along with the Deck and the Stack.
+   * Paints Player 1 and Player 2 controls along with the Deck and the Stack.
    */
   private void paintPlayersControls() {
 
     // Initialize the center section of the table
     JPanel centerSection = new JPanel(new GridLayout(1, 3));
 
-    // Add Player 1's controls to the leftmost part of the table's middle section
+    // Add Player 1 controls to the leftmost part of the table's middle section
     centerSection.add(new PlayerPanel("Player 1", p1HandPile, p1DrawFromStackButton, p1DrawFromDeckButton,
         p1LayOnTableButton, p1DiscardButton));
 
     // Add the Deck and Stack images to the center of the middle section
     centerSection.add(new PilePanel(stackGraphic, deckGraphic));
 
-    // Add Player 2's controls to the rightmost part of the table's middle section
+    // Add Player 2 controls to the rightmost part of the table's middle section
     centerSection.add(new PlayerPanel("Player 2", p2HandPile, p2DrawFromStackButton, p2DrawFromDeckButton,
         p2LayOnTableButton, p2DiscardButton));
 
@@ -181,7 +181,6 @@ public class Table extends JFrame implements ActionListener {
    */
   private void preparePlayerControls() {
 
-    // Player1 buttons
     p1DrawFromDeckButton.addActionListener(this);
     p1DrawFromStackButton.addActionListener(this);
     p1DrawFromStackButton.setEnabled(!stackDeck.isEmpty());
@@ -190,7 +189,6 @@ public class Table extends JFrame implements ActionListener {
     p1DiscardButton.addActionListener(this);
     p1DiscardButton.setEnabled(false);
 
-    // Player2 buttons
     p2DrawFromDeckButton.addActionListener(this);
     p2DrawFromDeckButton.setEnabled(false);
     p2DrawFromStackButton.addActionListener(this);
@@ -236,7 +234,6 @@ public class Table extends JFrame implements ActionListener {
     int suitIndex = Card.getSuitIndex(suit);
     int rankIndex = Card.getRankIndex(rank);
     System.out.println("\tLaying " + card.toString().toUpperCase());
-    // setPanels[rankIndex].array[suitIndex].setText(card.toString());
     setPanels[rankIndex].array[suitIndex].setIcon(card.getCardImage());
   }
 
@@ -263,7 +260,7 @@ public class Table extends JFrame implements ActionListener {
   }
 
   /**
-   * Handles user clicking on "Draw from Deck" button.
+   * Handles user clicking on Draw from Deck button.
    * @param playersHand the Hand of the player who clicked on the button.
    */
   private void handleDrawFromDeck(Hand playersHand) {
@@ -295,7 +292,7 @@ public class Table extends JFrame implements ActionListener {
   }
 
   /**
-   * Handles user clicking on "Draw from Stack" button.
+   * Handles user clicking on Draw from Stack button
    * @param playersHand the Hand of the player who clicked on the button.
    */
   private void handleDrawFromStack(Hand playersHand) {
@@ -327,7 +324,7 @@ public class Table extends JFrame implements ActionListener {
   }
 
   /**
-   * Handles user clicking on "Lay on Table" button.
+   * Handles user clicking on Lay on Table button.
    * @param playersHand     the Hand of the player who clicked on the button.
    * @param playersHandPile the UI representation of the player's hand.
    */
@@ -441,7 +438,7 @@ public class Table extends JFrame implements ActionListener {
       }
     }
 
-    // Search for a Set in the hand and lay on the table (if possible)
+    // Search for a Set in the hand and lay on the table
     Card[] set = playersHand.findSet();
     if (set != null) {
 
@@ -525,7 +522,7 @@ public class Table extends JFrame implements ActionListener {
         playerDrawn = true;
       }
 
-      // Draw from Stack (if there's at least one card in it)
+      // Draw from Stack
       if (!playerDrawn && !stackDeck.isEmpty() && p1DrawFromStackButton == src) {
         handleDrawFromStack(p1Hand);
         playerDrawn = true;
@@ -539,7 +536,7 @@ public class Table extends JFrame implements ActionListener {
       // Discard to Stack
       if (p1DiscardButton == src && playerDrawn) {
 
-        // Only permit discarding of one card at a time (instead of multiple)
+        // Discard one card at a time
         int[] num = p1HandPile.getSelectedIndices();
         if (num.length != 1)
           return;
@@ -566,7 +563,7 @@ public class Table extends JFrame implements ActionListener {
         playerDrawn = true;
       }
 
-      // Draw from Stack (if there's at least one card in it)
+      // Draw from Stack
       if (p2DrawFromStackButton == src && !playerDrawn && !stackDeck.isEmpty()) {
         handleDrawFromStack(p2Hand);
         playerDrawn = true;
@@ -580,7 +577,7 @@ public class Table extends JFrame implements ActionListener {
       // Discard to Stack
       if (p2DiscardButton == src && playerDrawn) {
 
-        // Only permit discarding of one card at a time (instead of multiple)
+        // Only discard one card at a time
         int[] num = p2HandPile.getSelectedIndices();
         if (num.length != 1)
           return;
