@@ -1,8 +1,6 @@
 # Rummy Card Game
 
- Christopher L. Ayala Griffin
- 
- CCOM4029: High Level Programming Languages
+ Christopher L. Ayala-Griffin
  
  ## Objectives
  
