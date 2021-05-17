@@ -5,17 +5,17 @@
  
  ## Objectives
  
- • To implement a stack-like ADT from scratch
- 
- • To create and extend ADTs to serve a particular purpose
- 
- • To explore control flow choices in an interactive application
- 
- • To use and potentially extend a GUI
- 
- • To recognize design patterns in the implementation
- 
- • To add two more design patterns to your implementation
+  • To implement a stack-like ADT from scratch
+
+  • To create and extend ADTs to serve a particular purpose
+
+  • To explore control flow choices in an interactive application
+
+  • To use and potentially extend a GUI
+
+  • To recognize design patterns in the implementation
+
+  • To add two more design patterns to your implementation
  
  ## Overview
  
@@ -23,10 +23,10 @@
 
 ### Usage
 
-• Compile source files with `javac rummy/Proj2.java` and `javac rummy/Game.java`
-• To run:
-   1. **player vs. computer game, run `java rummy.Proj2`**
-   2. **computer vs. computer game, run `java rummy.Game`**
+ • Compile source files with `javac rummy/Proj2.java` and `javac rummy/Game.java`
+ • To run:
+    1. **player vs. computer game, run `java rummy.Proj2`**
+    2. **computer vs. computer game, run `java rummy.Game`**
         - **`java rummy.Proj2 > output.txt` or `java rummy.Game > output.txt` creates a file containing your logs**
 
 
